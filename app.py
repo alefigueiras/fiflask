@@ -11,7 +11,7 @@ def index():
 
 @app.route('/show')
 def show():
-    symbol = request.args['ticker']
+    symbol = request.args['ticker'].upper()
 
     history = quandl(symbol)
     
