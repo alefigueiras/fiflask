@@ -3,7 +3,7 @@ import pandas
 from bokeh.plotting import figure
 
 
-def quandl(symbol, start_date):
+def quandl(symbol, start_date='2000-01-01'):
     # Get data and transform it into a python object (dict)
     url = 'https://www.quandl.com/api/v3/datasets/WIKI/%s.json?api_key=XQKAhbrdid5hNyDptPBx&start_date=%s'
     response = requests.get(url % (symbol, start_date))
@@ -25,7 +25,7 @@ def quandl(symbol, start_date):
     return df
 
 
-def plot(history, title, adj_closing=True, closing=False,
+def plot(history, title='Market history', adj_closing=True, closing=False,
          adj_opening=False, opening=False):
     # Create the figure canvas 
     f = figure(title=title,
