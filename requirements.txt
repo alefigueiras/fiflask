@@ -1,6 +1,6 @@
 dill==0.2.1
 flask>=0.12.3
-gunicorn==19.3.0
+gunicorn>=19.5.0
 Jinja2>=2.8.1
 oauth==1.0.1
 oauthlib==0.7.2
